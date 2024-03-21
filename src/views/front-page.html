@@ -1,0 +1,15 @@
+<% if (html) { %>
+<%~ include("/src/parts/header.html", {html: true}) %>
+<% } %>
+<% if (theme) { %>
+<?php get_header(); ?>
+<% } %>
+
+Front Page
+
+<% if (html) { %>
+<%~ include("/src/parts/footer.html", {html: true}) %>
+<% } %>
+<% if (theme) { %>
+<?php get_footer(); ?>
+<% } %>

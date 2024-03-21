@@ -1,0 +1,37 @@
+<% if (html) { %>
+<%~ include("/src/parts/header.html", {html: true}) %>
+<% } %>
+<% if (theme) { %>
+<?php get_header(); ?>
+<% } %>
+
+<article>
+
+  <h1>Hello World...</h1>
+  <!--<img src="@images/picture.png" alt="picture"> -->
+
+  <% if (html) { %>
+  <h2>условие сработало</h2>
+  <% } %>
+
+  <p>
+    <% if (html) { %>
+    Это для html
+    <% } %>
+
+    <% if (theme) { %>
+    Это для theme
+    <% } %>
+  </p>
+
+</article>
+<!--<img src="@images/icon.png" alt="icon">-->
+<!--<link href="@styles/style.scss" rel="stylesheet">-->
+<!--<script src="@scripts/main.js" defer="defer"></script>-->
+
+<% if (html) { %>
+<%~ include("/src/parts/footer.html", {html: true}) %>
+<% } %>
+<% if (theme) { %>
+<?php get_footer(); ?>
+<% } %>

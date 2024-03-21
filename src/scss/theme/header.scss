@@ -1,0 +1,37 @@
+.logo {
+    width: calc($text-left-margin - $m);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-field {
+    //position: absolute;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: calc($m / 2);
+}
+
+@media (min-width: $md-width) {
+    .logo {
+        justify-content: flex-start;
+    }
+
+    .menu ul li.search-field {
+        justify-content: flex-end;
+        padding: 0;
+        height: unset;
+        flex-direction: row;
+    }
+}
+
+nav {
+    border-bottom: $lines;
+    box-shadow: var(--shadow);
+
+    .submenu {
+        border-left: $lines;
+        border-bottom: $lines;
+        border-right: $lines;
+    }
+}

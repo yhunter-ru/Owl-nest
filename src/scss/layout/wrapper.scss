@@ -1,0 +1,15 @@
+.w2560 {
+    width: 100%;
+}
+
+.w {
+    display: flex;
+    margin-inline: $m;
+}
+
+@media (min-width: $md-width) {
+    .w2560 {
+          max-width: $max-width;
+          margin: 0 auto;
+    }
+}

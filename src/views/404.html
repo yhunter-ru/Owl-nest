@@ -1,0 +1,18 @@
+<% if (html) { %>
+<%~ include("/src/parts/header.html", {html: true}) %>
+<% } %>
+<% if (theme) { %>
+<?php get_header(); ?>
+<% } %>
+
+<article>
+    <h1>Error 404</h1>
+    <p>Page not found</p>
+</article>
+
+<% if (html) { %>
+<%~ include("/src/parts/footer.html", {html: true}) %>
+<% } %>
+<% if (theme) { %>
+<?php get_footer(); ?>
+<% } %>

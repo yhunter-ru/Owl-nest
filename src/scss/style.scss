@@ -1,0 +1,22 @@
+/*   
+Theme Name: Owl-nest 
+Theme URI: http://www.yhunter.ru
+Description: Starter theme
+Author: yhunter 
+Author URI: https://yhunter.ru
+*/
+@use 'sass:math';
+@import "options";
+
+@import "theme/gutenberg/text-block";
+
+body, html {
+    scroll-behavior: smooth;
+}
+
+main {
+    padding-top: $main-top;
+    padding-bottom: $m;
+}
+
+@import "theme/footer";

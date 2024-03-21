@@ -1,0 +1,59 @@
+<html lang="ru">
+
+<head>
+  <title>Hello World</title>
+  <% if (it.html) { %>
+  <link href="@styles/inline.scss?inline" rel="stylesheet" />
+  <% } %>
+  <% if (it.theme) { %>
+  <?php get_template_part( 'inline-css.php' ); ?>
+  <% } %>
+</head>
+
+<body>
+  <nav class="main-menu fixed">
+    <div class="w2560">
+      <div class="w">
+        <div class="logo">
+          <a href="/" title="Homepage">
+            logo
+          </a>
+        </div>
+        <input type="checkbox" id="touch-menu" />
+        <label for="touch-menu" class="mobile-menu">
+          <div></div>Меню
+        </label>
+        <div class="menu">
+          <ul>
+            <li> <a href="">About</a></li>
+            <li>
+              <input type="checkbox" id="touch-submenu1" />
+              <label for="touch-submenu1" class="mobile-submenu"></label>
+              <a href="">Blog</a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="">WordPress</a></li>
+                  <li><a href="">Travel</a></li>
+                  <li><a href="">Photo</a></li>
+                </ul>
+              </div>
+            <li><a href="">Portfolio</a>
+            </li>
+            <li><a href="">Contact Info</a></li>
+            <li class="search-field">
+              search
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="w2560">
+    <main>
+      <% if (it.html) { %>
+      <article>
+        <h2>условие в хедере сработало</h2>
+      </article>
+      <% } %>
