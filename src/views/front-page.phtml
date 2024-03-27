@@ -1,0 +1,28 @@
+<% if (html) { %>
+<%~ include("/src/parts/header.phtml", {html: true}) %>
+<% } %>
+<% if (theme) { %>
+<?php get_header(); ?>
+<% } %>
+<article>
+    <% if (html) { %>
+    <h1>Front Page</h1>
+
+    <% } %>
+
+    <% if (theme) { %>
+        <!-- WP Loop -->
+        <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
+            <h1><?php the_title(); ?></h1>
+            <?php the_content();?>
+        <?php endwhile;?>
+    <% } %>
+
+</article>
+
+<% if (html) { %>
+<%~ include("/src/parts/footer.phtml", {html: true}) %>
+<% } %>
+<% if (theme) { %>
+<?php get_footer(); ?>
+<% } %>

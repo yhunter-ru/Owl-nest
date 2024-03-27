@@ -1,7 +1,21 @@
 .logo {
-    width: calc($text-left-margin - $m);
+    width: calc($text-margin - $m);
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end;    
+
+    a {
+        font-size: 0rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: var(--txt);
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    svg {
+        height: calc($menu-nav-height - 1rem);
+    }
 }
 
 .search-field {
@@ -12,9 +26,17 @@
     padding: calc($m / 2);
 }
 
-@media (min-width: $md-width) {
+nav {
+    .w2560 {
+        height: 100%;
+    }
+}
+
+@media (min-width: $mobile-break) {
     .logo {
         justify-content: flex-start;
+
+
     }
 
     .menu ul li.search-field {
@@ -23,15 +45,23 @@
         height: unset;
         flex-direction: row;
     }
-}
 
-nav {
-    border-bottom: $lines;
-    box-shadow: var(--shadow);
-
-    .submenu {
-        border-left: $lines;
+    nav {
         border-bottom: $lines;
-        border-right: $lines;
+        box-shadow: var(--shadow);
+    
+        .w2560 {    
+            a {
+                font-size: 1rem;
+                gap: .5rem;
+            }
+        }
+    
+        .submenu {
+            border-left: $lines;
+            border-bottom: $lines;
+            border-right: $lines;
+        }
     }
 }
+

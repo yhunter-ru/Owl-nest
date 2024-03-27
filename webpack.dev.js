@@ -6,7 +6,7 @@ const myVar = 'ok ok var-r-r';
 module.exports = {
   mode: 'development',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist/Owl'),
     clean: false,
   },
 
@@ -20,6 +20,7 @@ module.exports = {
 
   plugins: [
     new HtmlBundlerPlugin({
+      test: /\.(html|php|phtml)$/i, // define template extensions to be processed
       // path to templates
       hotUpdate: true,
       entry: 'src/views/',
@@ -27,6 +28,7 @@ module.exports = {
         'html': true,
         'theme': false,
       },
+      filename: '[name].html',
       js: {
         // output filename for JS
         filename: 'js/[name].[contenthash:8].js',
@@ -35,7 +37,7 @@ module.exports = {
         // output filename for CSS
         filename: 'css/[name].[contenthash:8].css',
       },
-
+      minify: false,
       preprocessor: 'eta',
       preprocessorOptions: {
         async: false, // defaults 'false', wenn is 'true' then must be used `await includeAsync()`

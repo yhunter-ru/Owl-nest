@@ -1,5 +1,17 @@
 footer {
-    padding: $m;
-    text-align: center;
     border-top: $lines;
+    margin-top: $m;
+
+    .copyright {
+        @extend .text-field;
+        padding-block: $m;
+    }    
+}
+
+@media (min-width: $md-width) {
+    footer {
+        .copyright {
+            @extend .text-field;
+        }        
+    }
 }

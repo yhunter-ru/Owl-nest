@@ -7,6 +7,8 @@ $xl-width: 1200px;
 $xxl-width: 1400px;
 $max-width: 1920px;
 
+$mobile-break: $md-width;
+
 //Text
 $txt: var(--txt);
 $links: var(--links);
@@ -18,7 +20,6 @@ $font1: 1;
 $font2: 1.5;
 $font3: 2.25;
 $padding-margin-bottom: 1rem;
-$text-margin-left: var(--text-margin-left);
 
 //Color scheme
 $primary: var(--primary);
@@ -31,6 +32,15 @@ $bg: $white;
 $m: var(--m-inline);
 $main-top: 5rem;
 $lines: 1px var(--bg2) solid;
+
+$narrow-wide: 50%;
+$narrow-margin: $m;
+
+$wide-wide: 100%;
+$wide-margin: 0;
+
+$text-wide: var(--max-text-width);
+$text-margin: var(--text-margin-left);
 
 //Nav
 $menu-nav-bg: var(--bg);
@@ -80,8 +90,10 @@ $menu-mobile-breakdown: 820px;
 $menu-desktop-breakdown: 1280px;
 
 //Gutenberg blocks
-$max-text-width: var(--max-text-width);
-$text-left-margin: 25%;
 
 //Temp
 $p: 1rem;
+
+//Admin bar offset
+$mobile-admin-bar: 46px;
+$desktop-admin-bar: 32px;

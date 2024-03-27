@@ -1,1 +1,0 @@
-<footer>OWL-nest WordPress starter theme</footer><link href="style.css?=66c341cb" rel="stylesheet"><script src="js/main.22af4eb9.js" defer="defer"></script>

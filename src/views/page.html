@@ -1,5 +1,5 @@
 <% if (html) { %>
-<%~ include("/src/parts/header.html", {html: true}) %>
+<%~ include("/src/parts/header.phtml", {html: true}) %>
 <% } %>
 <% if (theme) { %>
 <?php get_header(); ?>
@@ -8,7 +8,7 @@
 Page
 
 <% if (html) { %>
-<%~ include("/src/parts/footer.html", {html: true}) %>
+<%~ include("/src/parts/footer.phtml", {html: true}) %>
 <% } %>
 <% if (theme) { %>
 <?php get_footer(); ?>

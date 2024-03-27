@@ -7,6 +7,7 @@ Author URI: https://yhunter.ru
 */
 @use 'sass:math';
 @import "options";
+@import "inline";
 
 @import "theme/gutenberg/text-block";
 
@@ -19,4 +20,6 @@ main {
     padding-bottom: $m;
 }
 
+@import "modules/pagination";
 @import "theme/footer";
+@import "modules/admin-bar";

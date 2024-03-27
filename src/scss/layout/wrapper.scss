@@ -7,9 +7,45 @@
     margin-inline: $m;
 }
 
-@media (min-width: $md-width) {
+.narrow {
+    max-width: $narrow-wide;
+    margin-inline: $m;
+}
+
+.wide {
+    margin-inline: $m;
+}
+
+.fullwide {
+    margin-inline: 0;
+}
+
+.text-field {
+    max-width: $text-wide;
+    margin-inline: $m;
+}
+
+@media (min-width: $mobile-break) {
     .w2560 {
           max-width: $max-width;
           margin: 0 auto;
+    }
+
+    .narrow {
+        margin-left: $text-margin;
+        margin-right: auto
+    }
+    
+    .wide {
+        margin-inline: $m;
+    }
+
+    .fullwide {
+        margin-inline: 0;
+    }
+    
+    .text-field {
+        margin-left: $text-margin;
+        margin-right: auto
     }
 }

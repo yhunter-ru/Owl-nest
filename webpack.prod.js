@@ -14,7 +14,7 @@ module.exports = {
   cache: true,
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist/Owl'),
     clean: true,
   },
 
@@ -29,18 +29,19 @@ module.exports = {
   plugins: [
     new HtmlBundlerPlugin({
       // path to templates
+      test: /\.(html|php|phtml)$/i, // define template extensions to be processed
       entry: 'src/views/',
       data: {
         'html': false,
         'theme': true,
+        'dir': '/wp-content/themes/Owl',
+        'hash': Math.random(),
       },
-      minify: {
-        //removeComments: true,
-      },
+      minify: false,
       filename: '[name].php',
       js: {
         // output filename for JS
-        filename: 'js/[name].[contenthash:8].js',
+        filename: 'js/[name].js',
       },
       css: {
         // output filename for CSS
@@ -53,15 +54,12 @@ module.exports = {
         //views: path.join(__dirname, 'src/views'), // absolute path to directory that contains templates
 
       },
+      beforePreprocessor: (content, { resourcePath, data }) => {
+        const pattern = /@hash/gs;
+        return content.replaceAll(pattern, 'ok ok hash'); // modify template content
+      },
 
-    }),
-    //new CopyPlugin({
-    //  patterns: [
-        //{ from: "src/style.css", to: "style.css" },
-     // ],
-    //}),
-
-
+    })
   ],
 
   module: {

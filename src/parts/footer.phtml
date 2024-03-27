@@ -1,0 +1,32 @@
+    </main>
+    <footer>
+        <div class="copyright">
+        © OWL-nest WordPress starter theme by <a href="https://yhunter.ru">Yuri Baranov</a><% if (it.theme) { %><?php echo ', '.date('Y') ?><% } %>
+        </div>
+   
+    </footer>
+    </div>
+
+
+    <% if (it.html) { %>
+    <link href="@styles/style.scss" rel="stylesheet">
+    <script src="@scripts/main.js" defer="defer"></script>
+    <% } %>
+    <% if (it.theme) { %>
+        <link rel="stylesheet" type="text/css"  >
+
+    <?php 
+        //Resolve html compiler error
+        $href = 'href="'.get_template_directory_uri().'/style.css?<%= hash %>"';
+        echo '<link rel="stylesheet" type="text/css" '.$href.'>';
+
+        $href = 'src="'.get_template_directory_uri().'/js/main.js?<%= hash %>"';
+        echo '<script '.$href.'></script>';
+    ?>
+
+    <?php wp_footer(); ?>  
+ 
+    <% } %>
+
+    </body>
+    </html>

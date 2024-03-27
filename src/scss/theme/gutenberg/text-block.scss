@@ -1,8 +1,7 @@
 main {
     article {
         h1, h2, h3, h4, h5, p {
-            max-width: $max-text-width;
-            margin-inline: $m;
+            @extend .text-field;
         }
     }
 }
@@ -11,7 +10,7 @@ main {
     main {
         article {
             h1, h2, h3, h4, h5, p {
-                margin-left: $text-left-margin;
+                @extend .text-field;
             }
         }
     }

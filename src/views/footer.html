@@ -1,6 +1,6 @@
 <% if (html) { %>
-<%~ include("/src/parts/footer.html", {html: true}) %>
+<%~ include("/src/parts/footer.phtml", {html: true}) %>
 <% } %>
 <% if (theme) { %>
-<%~ include("/src/parts/footer.html", {theme: true}) %>
+<%~ include("/src/parts/footer.phtml", {theme: true, hash: hash}) %>
 <% } %>
