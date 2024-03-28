@@ -12,7 +12,6 @@ $item-right-w: var(--masonry-right-width);
     background-color: $_bg;
 
     &__item {
-        //min-width: 1fr 1fr;
         background-color: var(--green);
         height: $item-height;
     }    

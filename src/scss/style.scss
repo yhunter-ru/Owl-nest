@@ -1,7 +1,4 @@
 /*   
-Theme Name: Owl-nest 
-Theme URI: http://www.yhunter.ru
-Description: Starter theme
 Author: yhunter 
 Author URI: https://yhunter.ru
 */
@@ -10,8 +7,9 @@ Author URI: https://yhunter.ru
 @import "css-vars";
 
 $header-bg: var(--blue);
-$p-in: calc(var(--p) * 2);
+$p2: calc(var(--p) * 2);
 $p: var(--p);
+$pv: var(--p-vertical);
 $mobile: 768px;
 
 @import "layout/wrapper";
@@ -19,11 +17,16 @@ $mobile: 768px;
 @import "modules/button";
 @import "layout/css-grid";
 @import "layout/masonry-grid";
+
 @import "modules/counter";
 
 body, html {
     scroll-behavior: smooth;
     font-family: "Roboto", sans-serif;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 * {
@@ -38,7 +41,7 @@ main {
 
 header {
     background-color: $header-bg;
-    padding: $p-in;
+    padding: $p2;
 }
 
 @import "theme/footer";

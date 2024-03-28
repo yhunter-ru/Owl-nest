@@ -1,8 +1,8 @@
 $footer-bg: var(--blue);
+$footer-height: var(--footer-height);
 
 footer {
-    height: var(--footer-height);
+    height: $footer-height;
     background-color: $footer-bg;
-
-    margin-top: var(--footer-height);
+    margin-top: $footer-height;
 }
