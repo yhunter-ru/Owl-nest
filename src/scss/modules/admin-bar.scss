@@ -9,7 +9,7 @@
     }
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: $mobile-break) {
     .admin-bar {
         .main-menu.fixed {
             top: $desktop-admin-bar;

@@ -45,7 +45,7 @@ module.exports = {
       },
       css: {
         // output filename for CSS
-        filename: '[name].css?=[contenthash:8]',
+        filename: '[name].css?[contenthash:8]',
       },
       preprocessor: 'eta',
       preprocessorOptions: {
@@ -54,11 +54,18 @@ module.exports = {
         //views: path.join(__dirname, 'src/views'), // absolute path to directory that contains templates
 
       },
-      beforePreprocessor: (content, { resourcePath, data }) => {
-        const pattern = /@hash/gs;
-        return content.replaceAll(pattern, 'ok ok hash'); // modify template content
+      postprocess: (content, { resourcePath, data }) => {
+        //const pattern = /<\?php (.+?)\?>/gs;
+        let pattern;
+        let newContent = content;
+        pattern = /images\/(.+?).(ico|png|jp?g|svg|webp)\?img/gm;
+        newContent = newContent.replaceAll(pattern, '<\?php echo get_template_directory_uri();\?>/images/$1.$2');
+        pattern = /<script(.+?)js\/(.+?)<\/script>/gs;
+        newContent = newContent.replaceAll(pattern, '<script src="<?php echo get_template_directory_uri();?>/js/$2</script>');
+        pattern = /style.css/gs;
+        newContent = newContent.replaceAll(pattern, '<?php echo get_template_directory_uri();?>/style.css');
+        return newContent; // modify template content
       },
-
     })
   ],
 
@@ -69,17 +76,10 @@ module.exports = {
         use: ['css-loader', 'sass-loader'],
       },
       {
-        test: /\.(ico|png|jp?g|svg)/,
+        test: /\.(ico|png|jp?g|svg|webp)/,
         type: 'asset',
         generator: {
-          // save images to file
-          filename: 'img/[name].[hash:8][ext]',
-        },
-        parser: {
-          dataUrlCondition: {
-            // inline images < 2 KB
-            maxSize: 2 * 1024,
-          },
+          filename: 'images/[name][ext]?img',
         },
       },
       {

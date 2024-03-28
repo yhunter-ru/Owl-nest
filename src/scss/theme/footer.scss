@@ -8,7 +8,7 @@ footer {
     }    
 }
 
-@media (min-width: $md-width) {
+@media (min-width: $mobile-break) {
     footer {
         .copyright {
             @extend .text-field;

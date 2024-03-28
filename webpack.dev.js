@@ -1,7 +1,5 @@
 const path = require('path');
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
-const { compile } = require('handlebars');
-const myVar = 'ok ok var-r-r';
 
 module.exports = {
   mode: 'development',

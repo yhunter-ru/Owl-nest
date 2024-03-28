@@ -6,18 +6,10 @@
     </footer>
     </div>
 
-
-                <link rel="stylesheet" type="text/css"  >
-
-    <?php 
-        //Resolve html compiler error
-        $href = 'href="'.get_template_directory_uri().'/style.css?0.12973046260937648"';
-        echo '<link rel="stylesheet" type="text/css" '.$href.'>';
-
-        $href = 'src="'.get_template_directory_uri().'/js/main.js?0.12973046260937648"';
-        echo '<script '.$href.'></script>';
-    ?>
-
+    <link href="<?php echo get_template_directory_uri();?>/style.css?52a359be" rel="stylesheet">
+    <script src="<?php echo get_template_directory_uri();?>/js/main.js?js-dir" defer="defer"></script>
+    
+    
     <?php wp_footer(); ?>  
  
     

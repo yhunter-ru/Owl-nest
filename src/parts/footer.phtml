@@ -7,22 +7,10 @@
     </footer>
     </div>
 
-
-    <% if (it.html) { %>
-    <link href="@styles/style.scss" rel="stylesheet">
-    <script src="@scripts/main.js" defer="defer"></script>
-    <% } %>
+    <link href="@styles/style.scss?css-dir" rel="stylesheet">
+    <script src="@scripts/main.js?js-dir" defer="defer"></script>
+    
     <% if (it.theme) { %>
-        <link rel="stylesheet" type="text/css"  >
-
-    <?php 
-        //Resolve html compiler error
-        $href = 'href="'.get_template_directory_uri().'/style.css?<%= hash %>"';
-        echo '<link rel="stylesheet" type="text/css" '.$href.'>';
-
-        $href = 'src="'.get_template_directory_uri().'/js/main.js?<%= hash %>"';
-        echo '<script '.$href.'></script>';
-    ?>
 
     <?php wp_footer(); ?>  
  
