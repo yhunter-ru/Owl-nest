@@ -7,7 +7,7 @@
     </div>
 
     <link href="<?php echo get_template_directory_uri();?>/style.css?52a359be" rel="stylesheet">
-    <script src="<?php echo get_template_directory_uri();?>/js/main.js?js-dir" defer="defer"></script>
+    <script src="<?php echo get_template_directory_uri();?>/js/main.js" defer="defer"></script>
     
     
     <?php wp_footer(); ?>  

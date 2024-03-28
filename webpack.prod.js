@@ -41,7 +41,7 @@ module.exports = {
       filename: '[name].php',
       js: {
         // output filename for JS
-        filename: 'js/[name].js',
+        filename: 'js/[name].[contenthash:8].js',
       },
       css: {
         // output filename for CSS
@@ -58,10 +58,12 @@ module.exports = {
         //const pattern = /<\?php (.+?)\?>/gs;
         let pattern;
         let newContent = content;
-        pattern = /images\/(.+?).(ico|png|jp?g|svg|webp)\?img/gm;
+        pattern = /images\/(.+?).(ico|png|jp?g|svg|webp)\?img-dir/gm;
         newContent = newContent.replaceAll(pattern, '<\?php echo get_template_directory_uri();\?>/images/$1.$2');
+
         pattern = /<script(.+?)js\/(.+?)<\/script>/gs;
         newContent = newContent.replaceAll(pattern, '<script src="<?php echo get_template_directory_uri();?>/js/$2</script>');
+
         pattern = /style.css/gs;
         newContent = newContent.replaceAll(pattern, '<?php echo get_template_directory_uri();?>/style.css');
         return newContent; // modify template content
@@ -79,7 +81,7 @@ module.exports = {
         test: /\.(ico|png|jp?g|svg|webp)/,
         type: 'asset',
         generator: {
-          filename: 'images/[name][ext]?img',
+          filename: 'images/[name][ext]?img-dir',
         },
       },
       {
