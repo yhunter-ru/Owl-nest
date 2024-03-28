@@ -1,37 +1,26 @@
-<% if (html) { %>
 <%~ include("/src/parts/header.phtml", {html: true}) %>
-<% } %>
-<% if (theme) { %>
-<?php get_header(); ?>
-<% } %>
 
-<article>
+<main>
+  <section>
+    <div class="masonry-grid counter">
+      <div class="masonry-grid__item span2"></div>
+      <div class="masonry-grid__item span3"></div>
+      <div class="masonry-grid__item"></div>
+      <div class="masonry-grid__item span5"></div>
+      <div class="masonry-grid__item"></div>
+    </div>
+  </section>
+  <section>
+    <div class="auto-grid" style="
+        --auto-grid-max-columns: 4;
+        --auto-grid-min-size: 10rem;
+        --auto-grid-gap: 30px;">
+      <div class="auto-grid__item"></div>
+      <div class="auto-grid__item"></div>
+      <div class="auto-grid__item"></div>
+      <div class="auto-grid__item"></div>
+    </div>
+  </section>
+</main>
 
-  <h1>Hello World...</h1>
-  <!--<img src="@images/picture.png" alt="picture"> -->
-
-  <% if (html) { %>
-  <h2>условие сработало</h2>
-  <% } %>
-
-  <?php echo 'PHP works'; ?>
-
-  <p>
-    <% if (html) { %>
-    Это для html
-    <% } %>
-
-    <% if (theme) { %>
-    Это для theme
-    <% } %>
-  </p>
-
-</article>
-
-
-<% if (html) { %>
 <%~ include("/src/parts/footer.phtml", {html: true}) %>
-<% } %>
-<% if (theme) { %>
-<?php get_footer(); ?>
-<% } %>

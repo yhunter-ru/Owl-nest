@@ -1,17 +1,8 @@
+$footer-bg: var(--blue);
+
 footer {
-    border-top: $lines;
-    margin-top: $m;
+    height: var(--footer-height);
+    background-color: $footer-bg;
 
-    .copyright {
-        @extend .text-field;
-        padding-block: $m;
-    }    
-}
-
-@media (min-width: $mobile-break) {
-    footer {
-        .copyright {
-            @extend .text-field;
-        }        
-    }
+    margin-top: var(--footer-height);
 }

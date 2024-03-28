@@ -4,58 +4,19 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello World</title>
-  <% if (it.html) { %>
-  <link href="@styles/inline.scss?inline" rel="stylesheet" />
-  <% } %>
-  <% if (it.theme) { %>
-  <?php include('inline-css.php'); ?>
-  <% } %>
+
+  <link href="@styles/style.scss" rel="stylesheet">
 </head>
 
-<body<% if (it.theme) { %> <?php body_class(); ?><% } %>>
-  <nav class="main-menu fixed">
-    <div class="w2560">
-      <div class="w">
-        <div class="logo">
-          <a href="/" title="Homepage">
-            <img src="@images/logo.svg" alt="OWl nest"> OWL Nest
-          </a>
-        </div>
-        <input type="checkbox" id="touch-menu" />
-        <label for="touch-menu" class="mobile-menu">
-          <div></div>Меню
-        </label>
-        <div class="menu">
-          <ul>
-            <li> <a href="">About</a></li>
-            <li>
-              <input type="checkbox" id="touch-submenu1" />
-              <label for="touch-submenu1" class="mobile-submenu"></label>
-              <a href="">Blog</a>
-              <div class="submenu">
-                <ul>
-                  <li><a href="">WordPress</a></li>
-                  <li><a href="">Travel</a></li>
-                  <li><a href="">Photo</a></li>
-                </ul>
-              </div>
-            <li><a href="">Portfolio</a>
-            </li>
-            <li><a href="">Contact Info</a></li>
-            <li class="search-field">
-              search
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <div class="w2560">
-    <main>
-      <% if (it.html) { %>
-      <article>
-        <h2>условие в хедере сработало</h2>
-      </article>
-      <% } %>
+<body>
+  <div class="wrapper">
+    <header>
+      <label for="open-dialog" class="button">Open pop-up button</label>
+      <input type="checkbox" name="open-dialog" id="open-dialog">
+      <dialog>
+        Pop-up
+        <form method="dialog">
+          <label for="open-dialog" class="button">x</label>
+        </form>
+      </dialog>
+    </header>
