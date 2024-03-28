@@ -9,8 +9,9 @@
   },
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack build --config webpack.prod.js",
-    "wp": "webpack build --config webpack.prod.js --watch",
+    "build": "webpack build --config webpack.prod-theme.js",
+    "html": "webpack build --config webpack.prod-html.js",
+    "wp": "webpack build --config webpack.prod-theme.js --watch",
     "test": "npm run build"
   },
   "devDependencies": {
