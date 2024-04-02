@@ -21,6 +21,8 @@ main {
     padding-bottom: $m;
 }
 
+@import "modules/date";
+@import "modules/meta";
 @import "modules/pagination";
 @import "theme/footer";
 @import "modules/admin-bar";

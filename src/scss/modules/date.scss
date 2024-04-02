@@ -1,0 +1,9 @@
+.entry__date {
+    @extend .text-field;
+}
+
+@media (min-width: $mobile-break) {
+    .entry__date {
+        @extend .text-field;
+    }
+}

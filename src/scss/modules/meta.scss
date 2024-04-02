@@ -1,0 +1,9 @@
+.meta {
+    @extend .text-field;
+}
+
+@media (min-width: $mobile-break) {
+    .meta {
+        @extend .text-field;
+    }
+}

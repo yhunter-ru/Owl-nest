@@ -6,14 +6,17 @@
 <% } %>
 
 <% if (html) { %>
-
+<div class="narrow">
+    <h1>Search for "text"</h1>
+</div>
 <article class="entry">
 
     <div class="entry__image">
         <img src="@images/owl.jpg" alt="Owl photo" />
     </div>
     <div class="entry__textfield">
-        <h1>Front page</h1>
+        <h2><a href="">Page title</a></h2>
+        <div class="entry__date">01.01.2024</div>
         <div class="entry__body">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus nesciunt, error, minima molestiae quaerat
             itaque nulla omnis neque dignissimos molestias blanditiis adipisci dolore excepturi odit laboriosam aut
@@ -25,6 +28,10 @@
 <% } %>
 
 <% if (theme) { %>
+<div class="narrow">
+    <h1><?php printf( __( 'Search Results for &#8220;%s&#8221;' ), '' . get_search_query() . '' ); ?></h1>
+</div>
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <article class="entry">
     <?php if ( has_post_thumbnail() ):   ?>
@@ -33,14 +40,30 @@
     </div>
     <?php endif; ?>
     <div class="entry__textfield">
-        <h1><?php the_title(); ?></h1>
+        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <div class="entry__date"><?php the_time('F j, Y');?></div>
         <div class="entry__body">
             <?php the_content(''); ?>
+        </div>
+        <div class="entry__meta meta">
+            <div class="meta__cats">
+                <?php echo 'Categories: '; the_category( ', ' );  ?>
+            </div>
+            <div class="meta__tags">
+                <?php the_tags( 'Tags: ', ', ', ' ' ); ?>
+            </div>
         </div>
     </div>
     <?php endwhile; ?>
 </article>
 <?php endif; ?>
+<% } %>
+
+<% if (html) { %>
+<%~ include("/src/parts/pagination.phtml", {html: true}) %>
+<% } %>
+<% if (theme) { %>
+<%~ include("/src/parts/pagination.phtml", {theme: true}) %>
 <% } %>
 
 <% if (html) { %>

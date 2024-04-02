@@ -1,0 +1,27 @@
+<% if (it.html) { %>
+<div class="pagination">
+    <a class="prev page-numbers" href="/">Forward</a>
+    <a class="page-numbers" href="/">1</a>
+    <span aria-current="page" class="page-numbers current">2</span>
+    <a class="page-numbers" href="/">3</a>
+    <a class="page-numbers" href="/">4</a>
+    <span class="page-numbers dots">&hellip;</span>
+    <a class="page-numbers" href="/">15</a>
+    <a class="next page-numbers" href="/">Back</a>
+</div>
+<% } %>
+<% if (it.theme) { %>
+<div class="pagination"><?php
+global $wp_query;
+$big = 999999999;
+echo paginate_links( array(
+    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+    'format' => '?paged=%#%',
+    'current' => max( 1, get_query_var('paged') ),
+    'type' => 'plain',
+    'prev_text'    => __('Forward'), 
+    'next_text'    => __('Back'),
+    'total' => $wp_query->max_num_pages
+) );
+?></div>
+<% } %>

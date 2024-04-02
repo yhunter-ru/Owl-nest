@@ -1,5 +1,10 @@
+<% if (html) { %>
+<%~ include("/src/parts/header.phtml", {html: true}) %>
+<% } %>
+<% if (theme) { %>
 <?php /* Template Name: Demo Page */ ?>
 <?php get_header(); ?>
+<% } %>
 
 <article>
     <div class = 'auto-grid' style = "
@@ -19,4 +24,9 @@
 
 </article>
 
+<% if (html) { %>
+<%~ include("/src/parts/footer.phtml", {html: true}) %>
+<% } %>
+<% if (theme) { %>
 <?php get_footer(); ?>
+<% } %>
