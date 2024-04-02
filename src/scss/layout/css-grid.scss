@@ -1,23 +1,19 @@
-/* by Nils Binder https://codepen.io/enbee81/pen/oNOzJXN */
 .auto-grid {
     --max-column-width: 100% / var(--auto-grid-max-columns, infinity) - var(--auto-grid-gap);
     --column-width: max(
       var(--max-column-width),
       min(var(--auto-grid-min-size, 10rem), 100%)
-    );
-  
+    );  
     display: grid;
-  
+
+    padding: calc(var(--p) * 2);
+    background-color: var(--turquoise);  
+    
     grid-template-columns: repeat(auto-fit, minmax(var(--column-width), 1fr));
-  
-    /* vertical gap falls back to general gap then falls back to 1rem*/
-    gap: var(--auto-grid-gap-vertical, var(--auto-grid-gap, 1rem))
-      var(--auto-grid-gap, 1rem);
+    gap: var(--auto-grid-gap-vertical, var(--auto-grid-gap, 1rem)) var(--auto-grid-gap, 1rem);
 
     &__item {
-        aspect-ratio: 3 / 2;
-        background: #f09;
-        border: 4px solid white;
-        border-radius: 0.5rem;
+        aspect-ratio: 255 / 199;
+        background: var(--dark-blue);
     }
-  }
+}

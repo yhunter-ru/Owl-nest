@@ -1,51 +1,9 @@
-.w2560 {
-    width: 100%;
-}
-
-.w {
+.wrapper {
+    max-width: var(--main-max-width);
+    margin: 0 auto;
+    padding: var(--p);
+    background-color: var(--bg);
     display: flex;
-    margin-inline: $m;
-}
-
-.narrow {
-    max-width: $narrow-wide;
-    margin-inline: $m;
-}
-
-.wide {
-    margin-inline: $m;
-}
-
-.fullwide {
-    margin-inline: 0;
-}
-
-.text-field {
-    max-width: $text-wide;
-    margin-inline: $m;
-}
-
-@media (min-width: $mobile-break) {
-    .w2560 {
-          max-width: $max-width;
-          margin: 0 auto;
-    }
-
-    .narrow {
-        margin-left: $text-margin;
-        margin-right: auto
-    }
-    
-    .wide {
-        margin-inline: $m;
-    }
-
-    .fullwide {
-        margin-inline: 0;
-    }
-    
-    .text-field {
-        margin-left: $text-margin;
-        margin-right: auto
-    }
+    gap: $p;
+    flex-direction: column;
 }

@@ -4,14 +4,11 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello World</title>
-  <% if (it.html) { %>
-  <link href="@styles/inline.scss?inline" rel="stylesheet" />
-  <% } %>
-  <% if (it.theme) { %>
-  <?php include('inline-css.php'); ?>
-  <% } %>
+
+  <link href="@styles/style.scss" rel="stylesheet">
 </head>
 
+<<<<<<< HEAD
 <body<% if (it.theme) { %> <?php body_class(); ?><% } %>>
   <nav class="main-menu fixed">
     <div class="w2560">
@@ -59,3 +56,17 @@
 
   <div class="w2560">
     <main>
+=======
+<body>
+  <div class="wrapper">
+    <header>
+      <label for="open-dialog" class="button">Open pop-up button</label>
+      <input type="checkbox" name="open-dialog" id="open-dialog">
+      <dialog>
+        Pop-up
+        <form method="dialog">
+          <label for="open-dialog" class="button">x</label>
+        </form>
+      </dialog>
+    </header>
+>>>>>>> 7cd5be8f832dac6936c7dd502174f8a323611311
