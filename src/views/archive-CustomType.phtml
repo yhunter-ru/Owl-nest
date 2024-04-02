@@ -11,16 +11,16 @@
 </div>
 <article class="entry">
 
-    <div class="entry__image">
+    <div class="entry__image narrow">
         <img src="@images/owl.jpg" alt="Owl photo" />
     </div>
     <div class="entry__textfield">
         <h2><a href="">Page title</a></h2>
         <div class="entry__date">01.01.2024</div>
         <div class="entry__body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus nesciunt, error, minima molestiae quaerat
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus nesciunt, error, minima molestiae quaerat
             itaque nulla omnis neque dignissimos molestias blanditiis adipisci dolore excepturi odit laboriosam aut
-            quisquam quibusdam. Quidem.
+            quisquam quibusdam. Quidem.</p>
         </div>
     </div>
     <?php endif; ?>
@@ -35,7 +35,7 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <article class="entry">
     <?php if ( has_post_thumbnail() ):   ?>
-    <div class="entry__image">
+    <div class="entry__image narrow">
         <?php the_post_thumbnail(); ?>
     </div>
     <?php endif; ?>

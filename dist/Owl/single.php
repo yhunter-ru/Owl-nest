@@ -4,7 +4,7 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <article class="entry">
     <?php if ( has_post_thumbnail() ):   ?>
-    <div class="entry__image">
+    <div class="entry__image narrow">
         <?php the_post_thumbnail(); ?>
     </div>
     <?php endif; ?>

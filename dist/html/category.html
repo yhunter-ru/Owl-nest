@@ -38,7 +38,12 @@
             </li>
             <li><a href="">Contact Info</a></li>
             <li class="search-field">
-              search
+              <form method="get" id="searchform" class="searchform" action="/"> <input type="text" name="s" id="s"
+                value="site search..."
+                onblur="if(this.value=='') this.value='site search...'; this.className='';"
+                onfocus="if(this.value=='site search...') this.value='';  this.className='act';">
+              <input type="submit" value="Send" class="searchform__submit" />
+            </form>
             </li>
           </ul>
 
@@ -49,11 +54,41 @@
 
   <div class="w2560">
     <main>
-            <article>
-        <h2>условие в хедере сработало</h2>
-      </article>
-      
-Category
+
+<div class="narrow">
+    <h1>Category</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum accusantium incidunt, harum ratione fugit
+        aspernatur non nesciunt voluptatem laudantium. Optio dignissimos iure nobis, nam error laborum rerum pariatur
+        nostrum dolor?</p>
+</div>
+<article class="entry">
+
+    <div class="entry__image narrow">
+        <img src="images/owl.jpg?img-dir" alt="Owl photo" />
+    </div>
+    <div class="entry__textfield">
+        <h2><a href="">Page title</a></h2>
+        <div class="entry__date">01.01.2024</div>
+        <div class="entry__body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus nesciunt, error, minima molestiae quaerat
+            itaque nulla omnis neque dignissimos molestias blanditiis adipisci dolore excepturi odit laboriosam aut
+            quisquam quibusdam. Quidem.
+        </div>
+    </div>
+    <?php endif; ?>
+</article>
+
+
+<div class="pagination">
+    <a class="prev page-numbers" href="/">Forward</a>
+    <a class="page-numbers" href="/">1</a>
+    <span aria-current="page" class="page-numbers current">2</span>
+    <a class="page-numbers" href="/">3</a>
+    <a class="page-numbers" href="/">4</a>
+    <span class="page-numbers dots">&hellip;</span>
+    <a class="page-numbers" href="/">15</a>
+    <a class="next page-numbers" href="/">Back</a>
+</div>
 
     </main>
     <footer>
@@ -63,8 +98,7 @@ Category
     </footer>
     </div>
 
-    <link href="css/style.52a359be.css" rel="stylesheet">
-    <script src="js/main.09d4e5b2.js" defer="defer"></script>
+    <link href="css/style.5377fd8b.css" rel="stylesheet">
     
     
     </body>
