@@ -1,0 +1,23 @@
+.admin-bar {
+    .main-menu.fixed {
+        top: $mobile-admin-bar;
+    }
+
+    main {
+        position: relative;
+        top: $mobile-admin-bar;
+    }
+}
+
+@media only screen and (min-width: $mobile-break) {
+    .admin-bar {
+        .main-menu.fixed {
+            top: $desktop-admin-bar;
+        }
+
+        main {
+            position: relative;
+            top: $desktop-admin-bar;
+        }
+    }
+}
