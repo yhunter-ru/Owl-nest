@@ -34,6 +34,7 @@ module.exports = {
       data: {
         'html': false,
         'theme': true,
+        'dir': '/wp-content/themes/Owl',
         'hash': Math.random(),
       },
       minify: false,

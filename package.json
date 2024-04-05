@@ -1,6 +1,6 @@
 {
-  "name": "Owl-Nest WordPress starter theme",
-  "description": "WordPress / HTML / Sass / JavaScript / Webpack",
+  "name": "hello-world",
+  "description": "HTML / Sass / JavaScript / Webpack",
   "version": "0.0.1",
   "repository": "webdiscus/html-bundler-webpack-plugin",
   "license": "ISC",
@@ -9,15 +9,22 @@
   },
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack build --config webpack.prod-theme.js",
     "html": "webpack build --config webpack.prod-html.js",
+    "wp": "webpack build --config webpack.prod-theme.js --watch",
     "test": "npm run build"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.10.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "*",
+    "handlebars": "*",
     "html-bundler-webpack-plugin": "*",
-    "sass": "^1.72.0",
-    "sass-loader": "^14.1.1",
+    "html-replace-webpack-plugin": "*",
+    "html-webpack-plugin": "*",
+    "inject-body-webpack-plugin": "*",
+    "sass": "*",
+    "sass-loader": "*",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
@@ -25,6 +32,8 @@
   "dependencies": {
     "html-replace-all-webpack-plugin": "^1.0.1",
     "jquery": "^3.7.1",
+    "nunjucks": "^3.2.4",
+    "replace-webpack-plugin": "^0.1.2",
     "reset-css": "^5.0.2"
   }
 }
